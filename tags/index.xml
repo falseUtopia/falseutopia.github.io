@@ -7,10 +7,110 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>©2020 falseutopia.</copyright>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>adb</title>
+      <link>/tags/adb/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/adb/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aid Learning</title>
+      <link>/tags/aid-learning/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/aid-learning/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>aircv</title>
+      <link>/tags/aircv/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/aircv/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>cv2</title>
+      <link>/tags/cv2/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cv2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>honour-of-kings</title>
+      <link>/tags/honour-of-kings/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/honour-of-kings/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>/tags/numpy/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/numpy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>opencv-python</title>
+      <link>/tags/opencv-python/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/opencv-python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>王者荣耀</title>
+      <link>/tags/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>脚本</title>
+      <link>/tags/%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E8%84%9A%E6%9C%AC/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>道</title>
