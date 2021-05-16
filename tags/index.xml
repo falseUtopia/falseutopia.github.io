@@ -6,11 +6,41 @@
     <description>Recent content in Tags on falseU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>©2020 falseutopia.</copyright>
-    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <copyright>© 2020 - 2021 falseutopia.</copyright>
+    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>KinhDown</title>
+      <link>/tags/kinhdown/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/kinhdown/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>教程</title>
+      <link>/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>百度云</title>
+      <link>/tags/%E7%99%BE%E5%BA%A6%E4%BA%91/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E7%99%BE%E5%BA%A6%E4%BA%91/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>adb</title>
