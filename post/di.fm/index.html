@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>python3-pywebview 跨平台客户端开发&nbsp;&ndash;&nbsp;falseU</title><link rel="stylesheet" href="/css/core.min.529526f03bdf05e2b69cd0a9d7da78a7f51ae6527af4701a9ddafffc9fd76e99521d04a6a8ecf94adf93953710d8d52f.css" integrity="sha384-UpUm8DvfBeK2nNCp19p4p/Ua5lJ69HAandr//J/XbplSHQSmqOz5St&#43;TlTcQ2NUv"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="python3-pywebview 跨平台客户端开发" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon.ico" alt /><span class="site name">falseU</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">分类</a><a class="nav item" href="/tags/">标签</a><a class="nav item" href="/about/">关于</a></nav></div></span></div><div class="site slogan"><span class="title">起舞如火焰,消失永没追寻</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">python3-pywebview 跨平台客户端开发</h1><p class="article date">2021-06-13</p></section><article class="article markdown-body"><h2 id="python3--pywebview-的-简单使用">python3 + pywebview 的 简单使用</h2>
+<h2 id="1-difm-介绍">1. DI.FM 介绍</h2>
+<blockquote>
+<p>官网 <a href="https://www.di.fm/">https://www.di.fm/</a></p>
+</blockquote>
+<p><img  src="https://www.androidpolice.com/wp-content/uploads/2019/12/di-fm-hero.png"
+        alt="di-fm-hero.png"/></p>
+<h3 id="11-difm-is-the-1-online-radio-network-for-electronic-music-fans-around-the-globe">1.1 DI.FM is the #1 online radio network for Electronic Music fans around the globe.</h3>
+<p>Internet Radio Broadcaster</p>
+<p>One of the first online radio networks to go live in 1999, DI.FM has grown into a destination and lifestyle for over 3 million unique listeners who tune in every month. DI.FM offers something unique for every electronic music fan, no matter what style of music you love.</p>
+<p>DI.FM is an Internet radio broadcaster consisting of over 90 channels dedicated exclusively to electronic music, such as house, trance, techno, drum and bass, and dubstep. DI.FM broadcasts handpicked selections consisting of classic, new and up-and-coming hits, as well as weekly and monthly mixed shows from professional DJs. It was founded in December 1999 as a hobby project by Ari Shohat in his Binghamton University dorm room and was one of the first Internet radio stations. It has often been listed as one of the top internet radio stations.</p>
+<p>说人话就是  这个网站是一个在线收听电子音乐的电台。</p>
+<h3 id="12-网易云音乐与difm">1.2 网易云音乐与DI.FM</h3>
+<p>2018年11月 网易云音乐和DI.FM合作， APP更新上架了DI.FM电台</p>
+<p><a href="https://imgtu.com/i/2owwM6"target="_blank"><img src="https://z3.ax1x.com/2021/06/13/2owwM6.jpg" alt="2owwM6.jpg" style="zoom: 25%;" /></a>
+<a href="https://imgtu.com/i/2ow0sK"target="_blank"><img src="https://z3.ax1x.com/2021/06/13/2ow0sK.jpg" alt="2ow0sK.jpg" style="zoom: 25%;" /></a>
+<a href="https://imgtu.com/i/2owrZD"target="_blank"><img src="https://z3.ax1x.com/2021/06/13/2owrZD.jpg" alt="2owrZD.jpg" style="zoom:25%;" /></a>
+<a href="https://imgtu.com/i/2owBqO"target="_blank"><img src="https://z3.ax1x.com/2021/06/13/2owBqO.jpg" alt="2owBqO.jpg" style="zoom:25%;" /></a></p>
+<p>点击<code>分享频道</code>看到有个<code>复制链接</code>按钮，粘贴出来是这个样子</p>
+<div class="highlight"><pre class="chroma"><code class="language-tex" data-lang="tex">我正在听DI.FM（出神舞曲）频道，更多音乐资源尽在网易云音乐！   
+网易云音乐 X DI.FM https://mp.music.163.com/5c8764e4ff3225d6738f615c/index.html?channelId=101
+</code></pre></div><p>这个地址在手机上点开是可以直接播放的，尝试在PC端浏览器打开</p>
+<p><img  src="https://z3.ax1x.com/2021/06/13/2o0I6x.png"
+        alt="2o0I6x.png"/></p>
+<p>PC端居然不让用？分析它源码发现是程序校验了UA，只允许移动设备访问</p>
+<p><a href="https://imgtu.com/i/2o0oX6"target="_blank"><img  src="https://z3.ax1x.com/2021/06/13/2o0oX6.png"
+        alt="2o0oX6.png"/></a></p>
+<p>那好办，直接在开发者模式内切换<code>设备仿真</code></p>
+<p><a href="https://imgtu.com/i/2osaD0"target="_blank"><img  src="https://z3.ax1x.com/2021/06/13/2osaD0.png"
+        alt="2osaD0.png"/></a></p>
+<p>接着<kbd>F5</kbd>一按，出来了</p>
+<p><a href="https://imgtu.com/i/2osUuq"target="_blank"><img  src="https://z3.ax1x.com/2021/06/13/2osUuq.png"
+        alt="2osUuq.png"/></a></p>
+<p>好，问题来了，听个音乐每次都打开浏览器再切换仿真，好麻烦啊</p>
+<p>有什么工具可以自定义设置UA访问指定页面呢？</p>
+<h2 id="2-pywebview--登场">2. <code>pywebview</code>  登场</h2>
+<p><img  src="https://pywebview.flowrl.com/logo.png"
+        alt="pywebview"/></p>
+<h3 id="21-build-gui-for-your-python-program-with-javascript-html-and-css">2.1. Build GUI for your Python program with JavaScript, HTML, and CSS</h3>
+<blockquote>
+<p>官网地址 <a href="https://pywebview.flowrl.com/">https://pywebview.flowrl.com/</a></p>
+</blockquote>
+<p>结合官方文档</p>
+<h3 id="22--requirementstxt">2.2.  requirements.txt</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 安装依赖</span>
+pip install <span class="nv">pywebview</span><span class="o">==</span>3.4
+pip install <span class="nv">cefpython3</span><span class="o">==</span>66.0
+pip install <span class="nv">PyQt5</span><span class="o">==</span>5.15.4
+pip install <span class="nv">PyQtWebengine</span><span class="o">==</span>5.15.4
+pip install <span class="nv">PyGObject</span><span class="o">==</span>3.40.1
+</code></pre></div><h3 id="23-创建脚本文件-difm-163-pywebviewpy">2.3. 创建脚本文件 <code>di.fm-163-pywebview.py</code></h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">webview</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">webview</span><span class="o">.</span><span class="n">create_window</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;DI.FM&#39;</span><span class="p">,</span>
+                                   <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://mp.music.163.com/5c8764e4ff3225d6738f615c/index.html?channe1Id=1060&#39;</span><span class="p">,</span>
+                                   <span class="n">resizable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                   <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+                                   <span class="n">height</span><span class="o">=</span><span class="mi">560</span><span class="p">)</span>
+
+    <span class="n">webview</span><span class="o">.</span><span class="n">start</span><span class="p">(</span>
+        <span class="n">user_agent</span><span class="o">=</span><span class="s1">&#39;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36&#39;</span><span class="p">,</span>
+        <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="n">gui</span><span class="o">=</span><span class="s1">&#39;cef&#39;</span><span class="p">)</span>
+
+</code></pre></div><p><a href="https://imgtu.com/i/2oHiQ0"target="_blank"><img  src="https://z3.ax1x.com/2021/06/13/2oHiQ0.png"
+        alt="2oHiQ0.png"/></a></p>
+<h2 id="3-运行效果">3. 运行效果</h2>
+<p><a href="https://imgtu.com/i/2ob8cq"target="_blank"><img  src="https://z3.ax1x.com/2021/06/13/2ob8cq.png"
+        alt="2ob8cq.png"/></a></p>
+<h2 id="4其他">4.其他</h2>
+<blockquote>
+<p>关于网易云音乐与DI.FM来自知乎的讨论 <a href="https://www.zhihu.com/question/23378396">https://www.zhihu.com/question/23378396</a></p>
+</blockquote>
+<p>还有，本人最爱的两种风格  <code>Trance</code>，<code>Hardstyle</code></p>
+<p>2021-06-13 21:42  拒绝浅尝辄止。</p></article><section class="article labels"><a class="tag" href=/tags/di%2efm/>di.fm</a><a class="tag" href=/tags/music%2e163%2ecom/>music.163.com</a><a class="tag" href=/tags/pywebview/>pywebview</a><a class="tag" href=/tags/python3/>python3</a></section><section class="article author"><img class="avatar" src="https://s1.ax1x.com/2020/08/01/aGkZYn.png" alt><p class="name">falseU</p><div class="bio">静以修生,俭以养德</div><div class="details"><a class="item" href="https://github.com/falseUtopia" target="_blank"><span class="iconfont icon-github"></span>&nbsp;falseUtopia</a><a class="item" href="https://gitee.com/falseUtopia" target="_blank"><span class="iconfont icon-gitee"></span>&nbsp;falseUtopia</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/baiducloud-quick-download/"><span class="iconfont icon-article"></span>百度云高速下载教程-KinhDown</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">© 2020 - 2021 falseutopia.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section></body>
+
+</html>

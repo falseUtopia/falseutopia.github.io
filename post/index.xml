@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2020 - 2021 falseutopia.</copyright>
-    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Jun 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python3-pywebview 跨平台客户端开发</title>
+      <link>/post/di.fm/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/di.fm/</guid>
+      <description>&lt;h2 id=&#34;python3--pywebview-的-简单使用&#34;&gt;python3 + pywebview 的 简单使用&lt;/h2&gt;</description>
+      
+    </item>
     
     <item>
       <title>百度云高速下载教程-KinhDown</title>
@@ -18,7 +28,7 @@
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/post/baiducloud-quick-download/</guid>
-      <description>百度云高速下载教程-KinhDown 解析工具来源 kinhdown官网 ，下面是使用方法 准备： 软件：Motrix Motrix官网 下载地址 下载后安</description>
+      <description>&lt;p&gt;百度云高速下载教程-KinhDown&lt;/p&gt;</description>
       
     </item>
     
@@ -28,7 +38,7 @@
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/honour-of-kings-auto-game-beta/</guid>
-      <description>自己动 说明 此程序的原理是利用python的 aircv 模块在大图中找小图并获取小图在大图内的坐标, 再用 adb 命令模拟点击此坐标达到自动点击的效果 准备 安装了</description>
+      <description>&lt;p&gt;自己动&lt;/p&gt;</description>
       
     </item>
     
