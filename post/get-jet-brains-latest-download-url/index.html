@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>获取Jetbrains系列最新下载链接&nbsp;&ndash;&nbsp;falseU</title><link rel="stylesheet" href="/css/core.min.529526f03bdf05e2b69cd0a9d7da78a7f51ae6527af4701a9ddafffc9fd76e99521d04a6a8ecf94adf93953710d8d52f.css" integrity="sha384-UpUm8DvfBeK2nNCp19p4p/Ua5lJ69HAandr//J/XbplSHQSmqOz5St&#43;TlTcQ2NUv"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="获取Jetbrains系列最新下载链接" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon.ico" alt /><span class="site name">falseU</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">分类</a><a class="nav item" href="/tags/">标签</a><a class="nav item" href="/about/">关于</a></nav></div></span></div><div class="site slogan"><span class="title">起舞如火焰,消失永没追寻</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">获取Jetbrains系列最新下载链接</h1><p class="article date">2021-06-14</p></section><article class="article markdown-body"><h2 id="获取-jet-brains-系列最新下载链接">获取 Jet brains 系列最新下载链接</h2>
+<blockquote>
+<p>说明： 因为jetbrains官网有时慢的离谱，所以才有下面的分析</p>
+</blockquote>
+<h3 id="分析官网">分析官网</h3>
+<blockquote>
+<p>官方下载页面地址：<br>
+<a href="https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows">https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows</a></p>
+</blockquote>
+<p><img  src="https://i.loli.net/2021/06/14/9gbCUYrZoBizuhn.png"
+        alt="2021-06-14_02-06.png"/></p>
+<h3 id="得到地址">得到地址</h3>
+<blockquote>
+<p>获得一份下载详情的地址：
+<a href="https://data.services.jetbrains.com/products/releases?code=IIU%2CIIC&amp;latest=true&amp;type=release&amp;build=&amp;_=1623607052641">https://data.services.jetbrains.com/products/releases?code=IIU%2CIIC&amp;latest=true&amp;type=release&amp;build=&amp;_=1623607052641</a></p>
+</blockquote>
+<ul>
+<li>参数分析
+<ul>
+<li><code>code</code> ： 产品编码；        支持选项 IIU，IIC， 详情见下方分析</li>
+<li><code>latest</code>： 标识最新版本； 支持选项 <code>true/false</code>， 如果不带，返回历史所有版本</li>
+<li><code>type</code>  ： 发布版本 ；        支持选项 <code>release</code>，且默认值是 <code>release</code></li>
+<li><code>build</code>  ： 暂时未知；</li>
+</ul>
+</li>
+<li>返回结果分析
+<ul>
+<li><code>IIC</code>：产品编码
+<ul>
+<li><code>date</code>： 更新时间</li>
+<li><code>type</code>： 发布版</li>
+<li><code>downloads</code>： 下载地址
+<ul>
+<li><code>linux</code>： 平台
+<ul>
+<li><code>link</code>： 各个平台的下载地址</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="分析产品编码">分析产品编码</h3>
+<p>产品编码分析：在源码中 全局搜索 关键字 <code>IIU</code></p>
+<p>快捷键 <kbd><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd></kbd></p>
+<p><img  src="https://i.loli.net/2021/06/14/SVxqNcHeLoM9Oyb.png"
+        alt="2021-06-14_02-31.png"/></p>
+<h3 id="得到所有支持的产品编码选项">得到所有支持的产品编码选项</h3>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">
+            allProductsPack: &#34;ALL&#34;,
+            appcode: &#34;AC&#34;,
+            clion: &#34;CL&#34;,
+            dotcover: &#34;DC&#34;,
+            dotcoverCommandLineTools: &#34;DCCLT&#34;,
+            dotmemory: &#34;DM&#34;,
+            dotmemoryUnit: &#34;DMU&#34;,
+            dotmemoryCommandLineProfiler: &#34;DMCLP&#34;,
+            dotpeek: &#34;DPK&#34;,
+            dottrace: &#34;DP&#34;,
+            dottraceCommandLineTools: &#34;DPCLT&#34;,
+            dottraceProfilingSDK: &#34;DPPS&#34;,
+            goland: &#34;GO&#34;,
+            hub: &#34;HB&#34;,
+            intellijIdea: &#34;II&#34;,
+            intellijIdeaUltimate: &#34;IIU&#34;,
+            intellijIdeaCommunity: &#34;IIC&#34;,
+            intellijIdeaCommunityEducational: &#34;IIE&#34;,
+            mps: &#34;MPS&#34;,
+            mpsIntellijIdeaPlugin: &#34;MPSIIP&#34;,
+            pycharm: &#34;PC&#34;,
+            pycharmProfessional: &#34;PCP&#34;,
+            pycharmCommunity: &#34;PCC&#34;,
+            pycharmEdu: &#34;PCE&#34;,
+            phpstorm: &#34;PS&#34;,
+            rider: &#34;RD&#34;,
+            rubymine: &#34;RM&#34;,
+            resharper: &#34;RS&#34;,
+            resharper_salesCode: &#34;RS0&#34;,
+            resharperCommandLineTools: &#34;RSCLT&#34;,
+            ReSharperCheckedBuilds: &#34;RSCHB&#34;,
+            resharperCpp: &#34;RC&#34;,
+            resharperUltimate: &#34;RSU&#34;,
+            resharperUltimateRider: &#34;RRR&#34;,
+            teamcity: &#34;TC&#34;,
+            toolbox: &#34;TBA&#34;,
+            webstorm: &#34;WS&#34;,
+            youtrack: &#34;YT&#34;,
+            youtrackStandAlone: &#34;YTD&#34;,
+            youtrackInCloud: &#34;YTI&#34;,
+            youtrackWorkflowEditor: &#34;YTWE&#34;,
+            upsource: &#34;US&#34;,
+            datagrip: &#34;DG&#34;
+
+</code></pre></div><h3 id="最终下载地址获取">最终下载地址获取</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># https://data.services.jetbrains.com/products/releases?code={code}&amp;latest=true&amp;_=1623607052641</span>
+
+<span class="c1"># code替换为对应打产品编码，如 IIU</span>
+curl -s https://data.services.jetbrains.com/products/releases?code<span class="o">=</span>IIU<span class="p">&amp;</span><span class="nv">latest</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">_</span><span class="o">=</span><span class="m">1623607052641</span>
+
+<span class="c1"># 配合jq解析json， 这是jq的安装方式 &gt; https://stedolan.github.io/jq/download/</span>
+
+<span class="c1"># linux</span>
+curl -s https://data.services.jetbrains.com/products/releases?code<span class="o">=</span>IIU<span class="p">&amp;</span><span class="nv">latest</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">_</span><span class="o">=</span><span class="m">1623607052641</span> <span class="p">|</span> jq <span class="s1">&#39;.IIU[0].downloads.linux.link&#39;</span>
+
+<span class="c1"># windows</span>
+curl -s https://data.services.jetbrains.com/products/releases?code<span class="o">=</span>IIU<span class="p">&amp;</span><span class="nv">latest</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">_</span><span class="o">=</span><span class="m">1623607052641</span> <span class="p">|</span> jq <span class="s1">&#39;.IIU[0].downloads.windows.link&#39;</span>
+
+<span class="c1"># other</span>
+...
+
+</code></pre></div><blockquote>
+<p>脚本地址<br>
+<a href="https://github.com/falseUtopia/basic-operation/blob/main/script/my-tools/JET-BRAINS/get-latest-download-url.sh">https://github.com/falseUtopia/basic-operation/blob/main/script/my-tools/JET-BRAINS/get-latest-download-url.sh</a></p>
+</blockquote></article><section class="article labels"><a class="tag" href=/tags/jetbrains/>Jetbrains</a><a class="tag" href=/tags/idea/>IDEA</a></section><section class="article author"><img class="avatar" src="https://s1.ax1x.com/2020/08/01/aGkZYn.png" alt><p class="name">falseU</p><div class="bio">静以修生,俭以养德</div><div class="details"><a class="item" href="https://github.com/falseUtopia" target="_blank"><span class="iconfont icon-github"></span>&nbsp;falseUtopia</a><a class="item" href="https://gitee.com/falseUtopia" target="_blank"><span class="iconfont icon-gitee"></span>&nbsp;falseUtopia</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/di.fm/"><span class="iconfont icon-article"></span>python3-pywebview 跨平台客户端开发</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">© 2020 - 2021 falseutopia.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section></body>
+
+</html>

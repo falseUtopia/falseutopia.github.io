@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2020 - 2021 falseutopia.</copyright>
-    <lastBuildDate>Sun, 13 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>获取Jetbrains系列最新下载链接</title>
+      <link>/post/get-jet-brains-latest-download-url/</link>
+      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/get-jet-brains-latest-download-url/</guid>
+      <description>&lt;h2 id=&#34;获取-jet-brains-系列最新下载链接&#34;&gt;获取 Jet brains 系列最新下载链接&lt;/h2&gt;</description>
+      
+    </item>
     
     <item>
       <title>python3-pywebview 跨平台客户端开发</title>
