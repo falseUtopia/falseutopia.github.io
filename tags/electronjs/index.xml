@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>music.163.com on falseU</title>
-    <link>/tags/music.163.com/</link>
-    <description>Recent content in music.163.com on falseU</description>
+    <title>electronjs on falseU</title>
+    <link>/tags/electronjs/</link>
+    <description>Recent content in electronjs on falseU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2020 - 2021 falseutopia.</copyright>
     <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/music.163.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/electronjs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>/post/di.fm-electronjs/</guid>
       <description>&lt;h2 id=&#34;electronjs-的-简单使用&#34;&gt;electronjs 的 简单使用&lt;/h2&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>di.fm 1 之python3-pywebview 简单使用</title>
-      <link>/post/di.fm/</link>
-      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/di.fm/</guid>
-      <description>&lt;h2 id=&#34;python3--pywebview-的-简单使用&#34;&gt;python3 + pywebview 的 简单使用&lt;/h2&gt;</description>
       
     </item>
     

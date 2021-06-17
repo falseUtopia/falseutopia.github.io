@@ -7,10 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2020 - 2021 falseutopia.</copyright>
-    <lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>di.fm</title>
+      <link>/tags/di.fm/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/di.fm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>electronjs</title>
+      <link>/tags/electronjs/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/electronjs/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>music.163.com</title>
+      <link>/tags/music.163.com/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/music.163.com/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>IDEA</title>
@@ -28,26 +58,6 @@
       <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/jetbrains/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>di.fm</title>
-      <link>/tags/di.fm/</link>
-      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/di.fm/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>music.163.com</title>
-      <link>/tags/music.163.com/</link>
-      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/music.163.com/</guid>
       <description></description>
       
     </item>

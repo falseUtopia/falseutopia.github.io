@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-cn"><meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>python3-pywebview 跨平台客户端开发&nbsp;&ndash;&nbsp;falseU</title><link rel="stylesheet" href="/css/core.min.529526f03bdf05e2b69cd0a9d7da78a7f51ae6527af4701a9ddafffc9fd76e99521d04a6a8ecf94adf93953710d8d52f.css" integrity="sha384-UpUm8DvfBeK2nNCp19p4p/Ua5lJ69HAandr//J/XbplSHQSmqOz5St&#43;TlTcQ2NUv"><meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="python3-pywebview 跨平台客户端开发" /><body><section id="header">
+<meta name="supported-color-schemes" content="light dark"><title>di.fm 1 之python3-pywebview 简单使用&nbsp;&ndash;&nbsp;falseU</title><link rel="stylesheet" href="/css/core.min.529526f03bdf05e2b69cd0a9d7da78a7f51ae6527af4701a9ddafffc9fd76e99521d04a6a8ecf94adf93953710d8d52f.css" integrity="sha384-UpUm8DvfBeK2nNCp19p4p/Ua5lJ69HAandr//J/XbplSHQSmqOz5St&#43;TlTcQ2NUv"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="di.fm 1 之python3-pywebview 简单使用" /><body><section id="header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon.ico" alt /><span class="site name">falseU</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">分类</a><a class="nav item" href="/tags/">标签</a><a class="nav item" href="/about/">关于</a></nav></div></span></div><div class="site slogan"><span class="title">起舞如火焰,消失永没追寻</span></div></section><section id="content"><div class="article-container"><section class="article header">
-    <h1 class="article title">python3-pywebview 跨平台客户端开发</h1><p class="article date">2021-06-13</p></section><article class="article markdown-body"><h2 id="python3--pywebview-的-简单使用">python3 + pywebview 的 简单使用</h2>
+    <h1 class="article title">di.fm 1 之python3-pywebview 简单使用</h1><p class="article date">2021-06-13</p></section><article class="article markdown-body"><h2 id="python3--pywebview-的-简单使用">python3 + pywebview 的 简单使用</h2>
 <h2 id="1-difm-介绍">1. DI.FM 介绍</h2>
 <blockquote>
 <p>官网 <a href="https://www.di.fm/">https://www.di.fm/</a></p>
@@ -75,7 +75,16 @@ pip install <span class="nv">PyGObject</span><span class="o">==</span>3.40.1
 <h2 id="3-运行效果">3. 运行效果</h2>
 <p><a href="https://imgtu.com/i/2ob8cq"target="_blank"><img  src="https://z3.ax1x.com/2021/06/13/2ob8cq.png"
         alt="2ob8cq.png"/></a></p>
-<h2 id="4其他">4.其他</h2>
+<h2 id="4-遗留问题">4. 遗留问题</h2>
+<p>同样代码，同样的依赖，在 windows10 中运行会播放不了</p>
+<p>通过添加环境变量 PYWEBVIEW_LOG=debug 设置日志级别发现</p>
+<p>在deepin 中实际上使用的引擎是  <code>GTK</code>， 而在windows中使用的是 <code>Winform / CEF</code> ，两者选择的引擎不一样</p>
+<p>那么修改windows平台内脚本配置把<code>gui</code>强制设置为 <code>gtk</code>，试试看</p>
+<pre><code>gui='gtk'
+</code></pre><p>结果会因为找不到<code>GTK</code>而使用默认的 <code>WinForms / Chromium</code></p>
+<p>然而 <code>Chromium</code> 不支持自定义UA，且在windows中安装<code>GTK</code>及其麻烦</p>
+<p>查了下，暂时没查到好的解决办法</p>
+<h2 id="5其他">5.其他</h2>
 <blockquote>
 <p>关于网易云音乐与DI.FM来自知乎的讨论 <a href="https://www.zhihu.com/question/23378396">https://www.zhihu.com/question/23378396</a></p>
 </blockquote>

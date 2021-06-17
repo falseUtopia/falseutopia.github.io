@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>di.fm 2 之 electronjs 简单使用&nbsp;&ndash;&nbsp;falseU</title><link rel="stylesheet" href="/css/core.min.529526f03bdf05e2b69cd0a9d7da78a7f51ae6527af4701a9ddafffc9fd76e99521d04a6a8ecf94adf93953710d8d52f.css" integrity="sha384-UpUm8DvfBeK2nNCp19p4p/Ua5lJ69HAandr//J/XbplSHQSmqOz5St&#43;TlTcQ2NUv"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="di.fm 2 之 electronjs 简单使用" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/favicon.ico" alt /><span class="site name">falseU</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">分类</a><a class="nav item" href="/tags/">标签</a><a class="nav item" href="/about/">关于</a></nav></div></span></div><div class="site slogan"><span class="title">起舞如火焰,消失永没追寻</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">di.fm 2 之 electronjs 简单使用</h1><p class="article date">2021-06-17</p></section><article class="article markdown-body"><h2 id="electronjs-的-简单使用">electronjs 的 简单使用</h2>
+<p>之前尝试用<code>pywebview</code>加个壳解决PC端播放的问题，发现<code>Deepin</code>上能用，<code>windows10</code>却不能，效果不理想，现在借着 <code>electronjs</code> 再搞一次事情</p>
+<h2 id="1-electron-介绍">1. electron 介绍</h2>
+<blockquote>
+<p>官网 <a href="https://www.electronjs.org/">https://www.electronjs.org/</a></p>
+<p>文档 <a href="https://www.electronjs.org/docs">https://www.electronjs.org/docs</a></p>
+</blockquote>
+<p><img  src="https://avatars.githubusercontent.com/u/13409222?s=500&amp;v=7"
+        alt="ectronjs.png"/></p>
+<h2 id="2-准备环境">2. 准备环境</h2>
+<ul>
+<li>
+<p>nodejs 准备</p>
+<ul>
+<li>
+<p>官网 ： <a href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p>
+</li>
+<li>
+<p>下载 ： <a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a></p>
+<ul>
+<li>windows 直接下载exe安装就好</li>
+</ul>
+</li>
+<li>
+<p>deepin安装方式，参考这份 issues &gt; <a href="https://hub.fastgit.org/nodesource/distributions/issues/638">https://hub.fastgit.org/nodesource/distributions/issues/638</a></p>
+<pre><code>VERSION=node_14.x
+DISTRO=&quot;$(dpkg --status tzdata|grep Provides|cut -f2 -d'-')&quot;
+
+echo &quot;deb https://deb.nodesource.com/$VERSION $DISTRO main&quot; | sudo tee /etc/apt/sources.list.d/nodesource.list
+
+echo &quot;deb-src https://deb.nodesource.com/$VERSION $DISTRO main&quot; | sudo tee -a /etc/apt/sources.list.d/nodesource.list
+
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get install nodejs
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>cnpm准备</p>
+<pre><code>npm install cnpm -g --registry=https://registry.npm.taobao.org
+cnpm -v #检测是否成功安装
+</code></pre></li>
+<li>
+<p>electronjs quick-start 下载</p>
+<pre><code># Clone this repository
+git clone https://hub.fastgit.org/electron/electron-quick-start
+# Go into the repository
+cd electron-quick-start
+# Install dependencies
+npm install
+# Run the app
+npm start
+</code></pre></li>
+</ul>
+<h2 id="3-上代码">3. 上代码</h2>
+<blockquote>
+<p>main.js</p>
+</blockquote>
+<pre><code>// Modules to control application life and create native browser window
+const {app, BrowserWindow, Menu} = require('electron')
+const path = require('path')
+
+function createWindow() {
+  // 隐藏菜单栏
+  Menu.setApplicationMenu(null)
+
+  // Create the browser window.
+  const mainWindow = new BrowserWindow({
+    width: 300,
+    height: 650,
+    minWidth: 300,
+    minHeight: 650,
+    maxWidth: 498,
+    maxHeight: 1080,
+    maximizable: false,
+    minimizable: true,
+    resizable: false,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
+  })
+
+  // and load the index.html of the app.
+  // mainWindow.loadFile('index.html')
+  mainWindow.loadURL('https://mp.music.163.com/5c8764e4ff3225d6738f615c/index.html?channe1Id=1060', {
+    userAgent: 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36'
+  })
+
+  // Open the DevTools.
+  // mainWindow.webContents.openDevTools()
+}
+
+// This method will be called when Electron has finished
+// initialization and is ready to create browser windows.
+// Some APIs can only be used after this event occurs.
+app.whenReady().then(() =&gt; {
+  createWindow()
+
+  app.on('activate', function () {
+    // On macOS it's common to re-create a window in the app when the
+    // dock icon is clicked and there are no other windows open.
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+  })
+})
+
+// Quit when all windows are closed, except on macOS. There, it's common
+// for applications and their menu bar to stay active until the user quits
+// explicitly with Cmd + Q.
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') app.quit()
+})
+
+// In this file you can include the rest of your app's specific main process
+// code. You can also put them in separate files and require them here.
+</code></pre><blockquote>
+<p>package.json</p>
+</blockquote>
+<pre><code>{
+  &quot;name&quot;: &quot;DI.FM&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;di.fm 163&quot;,
+  &quot;main&quot;: &quot;main.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;electron .&quot;
+  },
+  &quot;repository&quot;: &quot;https://falseutopia.github.io/post/di.fm/&quot;,
+  &quot;keywords&quot;: [
+    &quot;Electron&quot;,
+    &quot;difm&quot;
+  ],
+  &quot;author&quot;: &quot;falseUtopia&quot;,
+  &quot;license&quot;: &quot;CC0-1.0&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;@electron-forge/cli&quot;: &quot;^6.0.0-beta.57&quot;,
+    &quot;electron&quot;: &quot;^13.1.2&quot;
+  }
+}
+</code></pre><p>搞定</p>
+<p><code>Electronic music</code> 配 <code>Electron</code> . 绝！</p></article><section class="article labels"><a class="tag" href=/tags/di%2efm/>di.fm</a><a class="tag" href=/tags/music%2e163%2ecom/>music.163.com</a><a class="tag" href=/tags/electronjs/>electronjs</a></section><section class="article author"><img class="avatar" src="https://s1.ax1x.com/2020/08/01/aGkZYn.png" alt><p class="name">falseU</p><div class="bio">静以修生,俭以养德</div><div class="details"><a class="item" href="https://github.com/falseUtopia" target="_blank"><span class="iconfont icon-github"></span>&nbsp;falseUtopia</a><a class="item" href="https://gitee.com/falseUtopia" target="_blank"><span class="iconfont icon-gitee"></span>&nbsp;falseUtopia</a></div>
+</section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/post/get-jet-brains-latest-download-url/"><span class="iconfont icon-article"></span>获取Jetbrains系列最新下载链接</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">© 2020 - 2021 falseutopia.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section></body>
+
+</html>
